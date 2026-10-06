@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Room She Left Wrong</title>
+<meta name="description" content="The Room She Left Wrong, a Daphne Cross Original series. Book 1 of Secrets Behind Closed Doors: 4 seasons, 50 episodes, a new book every 90 days. Lock in the $14.99 founding price.">
+<meta property="og:title" content="The Room She Left Wrong | Daphne Cross Originals">
+<meta property="og:description" content="Four seasons. Fifty episodes. One mystery you won't be able to stop watching. Episode 1 is free.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0c1016">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400;1,6..96,500&family=Libre+Franklin:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '1361790');
+</script>
+<!-- End MailerLite Universal -->
+<style>html,body{margin:0} img{max-width:100%} [hidden]{display:none!important}</style>
+</head>
+<body>
+<style>
+/* Layout: a dark hallway. One door left ajar (the hero), lamplight leaking through it; everything below is lit only where it matters. Single dark theme by choice. */
+:root{
+  --ink:#0c1016;        /* hallway at night, blue-biased */
+  --wall:#141a22;       /* surfaces */
+  --wall-2:#1b2330;
+  --line:#2a3342;
+  --paper:#ece4da;      /* text, warm */
+  --dust:#9a958f;       /* muted text */
+  --lamp:#e7b464;       /* lamplight accent */
+  --lamp-dim:#7a5b2f;
+  --rose:#c08584;       /* faded wallpaper, arc color */
+  --slate:#7d93ad;      /* cold arc color */
+  --blood:#b4443d;      /* finale */
+  --s3:#9a8cb6;         /* season 3, dusk violet */
+  --s4:#b98a5e;         /* season 4, burnt lamp */
+  --f-display:"Bodoni Moda", "Didot", Georgia, serif;
+  --f-body:"Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--ink);color:var(--paper);font-family:var(--f-body);font-size:16px;line-height:1.6;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:20px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--lamp);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;text-wrap:balance;margin:0;line-height:1.08}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--lamp)}
+.muted{color:var(--dust)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:2px;font:600 15px/1 var(--f-body);text-decoration:none;cursor:pointer;border:1px solid transparent;transition:background .2s,color .2s,border-color .2s}
+.btn-lamp{background:var(--lamp);color:#1a1208}
+.btn-lamp:hover{background:#f2c67c}
+.btn-ghost{border-color:var(--line);color:var(--paper);background:transparent}
+.btn-ghost:hover{border-color:var(--lamp);color:var(--lamp)}
+
+/* nav */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--ink) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.mark{font-family:var(--f-display);font-size:20px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none}
+.mark i{font-style:italic;letter-spacing:.04em;text-transform:none;color:var(--lamp);font-size:15px;margin-left:8px}
+nav .btn{padding:10px 16px;font-size:14px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center;padding-block:72px 80px}
+.hero-copy{min-width:0;display:grid;gap:22px;position:relative;z-index:2}
+.hero h1{font-size:clamp(46px,7.4vw,96px);font-style:italic;font-weight:400;letter-spacing:-.01em}
+.hero h1 span{display:block;font-style:normal;font-weight:600}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--f-mono);font-size:13px;color:var(--dust)}
+.meta b{color:var(--paper);font-weight:500}
+.hook{font-size:19px;max-width:34ch;color:var(--paper)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.fine{font-size:13px;color:var(--dust)}
+
+/* the door */
+.door{position:relative;aspect-ratio:3/5;max-width:300px;width:100%;justify-self:center;background:linear-gradient(180deg,#19202b,#10151d);border:1px solid var(--line);box-shadow:inset 0 0 0 10px #121822, inset 0 0 0 11px var(--line)}
+.door::before{content:"";position:absolute;inset:22px 22px 52% 22px;border:1px solid var(--line)}
+.door::after{content:"";position:absolute;inset:52% 22px 22px 22px;border:1px solid var(--line)}
+.gap{position:absolute;top:0;bottom:0;right:-1px;width:14px;background:linear-gradient(90deg,rgba(231,180,100,.0),var(--lamp) 60%,#fff1d4);box-shadow:0 0 40px 12px rgba(231,180,100,.35),0 0 140px 40px rgba(231,180,100,.12);animation:leak 3.2s ease-out both}
+.spill{position:absolute;bottom:-40px;right:-160px;width:420px;height:120px;background:radial-gradient(ellipse at 20% 0%,rgba(231,180,100,.28),transparent 70%);transform:skewX(-35deg);pointer-events:none;animation:fade 3.2s ease-out both}
+.knob{position:absolute;right:28px;top:54%;width:12px;height:12px;border-radius:50%;background:var(--lamp-dim);box-shadow:0 0 8px rgba(231,180,100,.5)}
+.door-label{position:absolute;left:0;right:0;bottom:-34px;text-align:center;font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;color:var(--dust);text-transform:uppercase}
+@keyframes leak{from{width:3px;opacity:.6}to{width:14px;opacity:1}}
+@keyframes fade{from{opacity:.4}to{opacity:1}}
+
+section{padding-block:80px;border-bottom:1px solid var(--line)}
+.sec-head{display:grid;gap:12px;margin-bottom:40px;max-width:640px}
+.sec-head h2{font-size:clamp(32px,4.4vw,48px)}
+
+/* release steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.step{background:var(--wall);padding:28px;display:grid;gap:10px;align-content:start;min-width:0}
+.step .code{font-family:var(--f-mono);font-size:13px;color:var(--lamp)}
+.step h3{font-size:26px}
+.step p{margin:0;color:var(--dust)}
+
+/* season map */
+.legend{display:flex;flex-wrap:wrap;gap:10px 22px;margin-bottom:22px;font-size:13px;color:var(--dust)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.legend i{width:12px;height:12px;display:inline-block;border-radius:1px}
+.seasons{display:grid;gap:14px}
+.srow{display:grid;grid-template-columns:200px 1fr;gap:18px;align-items:center}
+.slabel{display:grid;gap:2px;min-width:0}
+.slabel .s{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--sc)}
+.slabel .n{font-family:var(--f-display);font-size:20px;line-height:1.15}
+.slabel .w{font-family:var(--f-mono);font-size:12px;color:var(--dust)}
+.grid50{display:grid;grid-template-columns:repeat(13,1fr);gap:5px;min-width:0}
+.tabs{display:flex;flex-wrap:wrap;gap:8px}
+.tabs button{flex:1 1 0;min-width:0;text-align:left;background:var(--wall);border:1px solid var(--line);color:var(--dust);padding:12px 14px;font:400 17px/1.2 var(--f-display);cursor:pointer;border-radius:2px;transition:border-color .15s,color .15s}
+.tabs button span{display:block;font:500 11px/1.4 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--sc);margin-bottom:4px}
+.tabs button:hover{color:var(--paper)}
+.tabs button[aria-selected="true"]{border-color:var(--sc);color:var(--paper);background:var(--wall-2)}
+.sdesc{color:var(--dust);margin:18px 0 10px;max-width:60ch}
+.eplist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.eplist li{display:grid;grid-template-columns:56px 1fr auto auto;gap:16px;align-items:baseline;padding:14px 4px;border-bottom:1px solid var(--line)}
+.eplist .eno{font-family:var(--f-mono);font-size:13px;color:var(--sc);font-variant-numeric:tabular-nums}
+.eplist .etl{font-family:var(--f-display);font-size:20px;min-width:0}
+.eplist .tag{font:500 11px/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--lamp);border:1px solid var(--lamp-dim);padding:5px 8px;border-radius:2px;white-space:nowrap}
+.eplist .tag.free{background:var(--lamp);color:#1a1208;border-color:var(--lamp)}
+.eplist .ewk{font-family:var(--f-mono);font-size:12px;color:var(--dust);white-space:nowrap}
+/* 90-day book cycle */
+.cycle{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:28px}
+.book{background:var(--wall);padding:22px 22px 24px;display:grid;gap:6px;align-content:start;min-width:0;position:relative}
+.book .d{font-family:var(--f-mono);font-size:12px;color:var(--dust);font-variant-numeric:tabular-nums}
+.book .t{font-family:var(--f-display);font-size:22px;line-height:1.15}
+.book .m{font-size:14px;color:var(--dust)}
+.book.now{background:linear-gradient(180deg,#221d16,var(--wall))}
+.book.now::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:var(--lamp)}
+.book.now .d{color:var(--lamp)}
+.bar{height:6px;display:grid;grid-template-columns:12fr 13fr 12fr 13fr;gap:2px;margin-top:6px}
+.bar i{display:block;border-radius:1px;opacity:.85}
+.ep{aspect-ratio:2/3;border-radius:1px;position:relative;background:var(--c);opacity:.55;border:0;padding:0;cursor:pointer;transition:opacity .15s,transform .15s}
+.ep:hover,.ep[aria-pressed="true"]{opacity:1;transform:translateY(-3px)}
+.ep.event{opacity:1;box-shadow:0 0 0 2px var(--ink),0 0 0 3px var(--lamp)}
+.ep.free::after{content:"";position:absolute;inset:auto 0 -9px 0;margin:auto;width:5px;height:5px;border-radius:50%;background:var(--lamp)}
+.readout{margin-top:28px;display:grid;grid-template-columns:auto 1fr;gap:6px 20px;align-items:baseline;padding:22px 24px;background:var(--wall);border:1px solid var(--line);min-height:96px}
+.readout .num{font-family:var(--f-mono);font-size:13px;color:var(--lamp);grid-row:span 2}
+.readout .t{font-family:var(--f-display);font-size:26px}
+.readout .d{color:var(--dust);font-size:15px}
+.arcs{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:28px}
+.arc{background:var(--wall);padding:18px 20px;display:grid;gap:4px}
+.arc .r{font-family:var(--f-mono);font-size:12px;color:var(--dust)}
+.arc .n{font-family:var(--f-display);font-size:20px}
+.arc.hot .n{color:var(--lamp)}
+
+/* pricing */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.plan{border:1px solid var(--line);background:var(--wall);padding:30px 26px;display:grid;gap:14px;align-content:start;min-width:0;position:relative}
+.plan.feature{border-color:var(--lamp);background:linear-gradient(180deg,#221d16,var(--wall) 60%)}
+.plan .tag{position:absolute;top:-12px;left:24px;background:var(--lamp);color:#1a1208;font:600 11px/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;padding:6px 10px}
+.plan h3{font-size:26px}
+.price{display:flex;align-items:baseline;gap:6px;font-variant-numeric:tabular-nums}
+.price b{font-family:var(--f-display);font-size:48px;font-weight:400}
+.price s{color:var(--dust);font-size:15px}
+.price span{color:var(--dust);font-size:15px}
+.plan ul{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:15px}
+.plan li{padding-left:20px;position:relative}
+.plan li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:1px;background:var(--lamp)}
+.plan .btn{margin-top:8px;width:100%}
+.alacarte{margin-top:28px;display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--line)}
+.ala{padding:22px 26px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.ala + .ala{border-left:1px solid var(--line)}
+.ala .nm{font-family:var(--f-display);font-size:22px}
+.ala .nm small{display:block;font-family:var(--f-body);font-size:14px;color:var(--dust)}
+.ala .pr{font-family:var(--f-mono);font-size:20px;font-variant-numeric:tabular-nums}
+
+/* founding */
+.founding{text-align:left;background:radial-gradient(ellipse at 85% 50%,rgba(231,180,100,.12),transparent 55%)}
+.founding .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.founding h2{font-size:clamp(34px,5vw,58px);font-style:italic}
+.lockbox{border:1px solid var(--lamp-dim);padding:28px;display:grid;gap:16px;background:var(--wall)}
+.lockrow{display:flex;justify-content:space-between;gap:12px;font-family:var(--f-mono);font-size:14px;border-bottom:1px dashed var(--line);padding-bottom:10px}
+.lockrow b{color:var(--lamp);font-weight:500}
+
+/* faq */
+.faq{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.faq div{background:var(--ink);padding:24px 26px;min-width:0}
+.faq h3{font-size:21px;margin-bottom:8px}
+.faq p{margin:0;color:var(--dust);font-size:15px}
+
+footer{padding-block:40px;font-size:13px;color:var(--dust)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media (max-width:860px){
+  .hero .wrap,.founding .wrap{grid-template-columns:1fr}
+  .door{max-width:200px;order:-1;justify-self:start}
+  .steps,.plans,.faq,.alacarte{grid-template-columns:1fr}
+  .ala + .ala{border-left:0;border-top:1px solid var(--line)}
+  .srow{grid-template-columns:1fr;gap:8px}
+  .cycle{grid-template-columns:1fr}
+  .eplist li{grid-template-columns:44px 1fr;row-gap:2px}
+  .eplist .tag{grid-column:2;justify-self:start}
+  .eplist .ewk{grid-column:2}
+  .tabs button{flex:1 1 45%}
+  .grid50{gap:3px}
+  section{padding-block:60px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<nav>
+  <div class="wrap">
+    <a class="mark" href="#top">Daphne Cross<i>Originals</i></a>
+    <a class="btn btn-lamp waitlist" href="#founding">Join the founding list</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="eyebrow">A Daphne Cross Original Series</div>
+      <h1>The Room <span>She Left Wrong</span></h1>
+      <div class="meta"><span><b>4</b> seasons</span><span><b>50</b> episodes</span><span><b>90</b> days</span><span>Book 1 of <i>Secrets Behind Closed Doors</i></span></div>
+      <p class="hook">Corinne knows exactly how she left that room. Someone else knows it too.</p>
+      <p class="muted" style="margin:0;max-width:46ch">Four new episodes every week. Four seasons in 90 days. Then the next book begins.</p>
+      <div class="cta-row">
+        <a class="btn btn-lamp waitlist" href="#founding">Lock in $14.99 founding price</a>
+        <a class="btn btn-ghost" href="#season">See the seasons</a>
+      </div>
+      <p class="fine">Episode 1 is free for everyone on the list.</p>
+    </div>
+    <div class="door" aria-hidden="true">
+      <div class="gap"></div><div class="knob"></div><div class="spill"></div>
+      <div class="door-label">S1 · E01 · Free</div>
+    </div>
+  </div>
+</header>
+
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">How it unlocks</div>
+      <h2>You start with four. Four more arrive every week.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="code">E01</div><h3>Free to watch</h3><p>The first episode is open to anyone. No card, no commitment.</p></div>
+      <div class="step"><div class="code">E02 – E04</div><h3>Unlocked the day you join</h3><p>Members get the next three episodes right away, enough to get pulled all the way in.</p></div>
+      <div class="step"><div class="code">4 a week → E50</div><h3>The whole book in 13 weeks</h3><p>Four new episodes land every week. Four seasons, each ending on a finale, all within 90 days.</p></div>
+    </div>
+    <div class="cycle" id="cycle" aria-label="New book every 90 days"></div>
+  </div>
+</section>
+
+<section id="season">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Book 1 · Season map</div>
+      <h2>Fifty chapters. Four seasons. Built like television.</h2>
+      <p class="muted" style="margin:0">One chapter is one episode. Every season ends on a finale. Tap any episode to see when it drops.</p>
+    </div>
+    <div class="legend" id="legend"></div>
+    <div class="seasons" id="seasons" role="group" aria-label="Book 1 episodes by season"></div>
+    <div class="readout" aria-live="polite" id="readout">
+      <div class="num" id="r-num">S1 · E01</div><div class="t" id="r-t">The Last Sunday</div><div class="d" id="r-d">Free for everyone. Drops in week 1.</div>
+    </div>
+    <div class="eps">
+      <div class="sec-head" style="margin:56px 0 20px"><div class="eyebrow">Episodes</div><h2 style="font-size:clamp(26px,3.4vw,36px)">Book 1 · The Room She Left Wrong</h2></div>
+      <div class="tabs" id="tabs" role="tablist" aria-label="Seasons"></div>
+      <p class="sdesc" id="sdesc"></p>
+      <ol class="eplist" id="eplist"></ol>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Membership</div>
+      <h2>A new book every 90 days.</h2>
+      <p class="muted" style="margin:0">Every membership includes all four seasons of Book 1, every new book as it premieres, and the full library behind it.</p>
+    </div>
+    <div class="plans">
+      <div class="plan feature">
+        <div class="tag">Founding rate</div>
+        <h3>Monthly</h3>
+        <div class="price"><b>$14.99</b><span>/month</span></div>
+        <div class="fine"><s>$19.99</s> regular price after launch. Founding members keep $14.99.</div>
+        <ul><li>Episodes 1 to 4 the day you join</li><li>Four new episodes every week</li><li>A new book every 90 days</li><li>Cancel anytime</li></ul>
+        <a class="btn btn-lamp waitlist" href="#founding">Reserve founding price</a>
+      </div>
+      <div class="plan">
+        <h3>Premium</h3>
+        <div class="price"><b>$24.99</b><span>/month</span></div>
+        <div class="fine">For the readers who need to know first.</div>
+        <ul><li>Everything in Monthly</li><li>Early access to new episodes</li><li>Bonus and special episodes</li><li>Behind-the-scenes case files</li></ul>
+        <a class="btn btn-ghost waitlist" href="#founding">Join the list</a>
+      </div>
+      <div class="plan">
+        <h3>Annual</h3>
+        <div class="price"><b>$149.99</b><span>/year</span></div>
+        <div class="fine">About $12.50 a month. Save $29.89 versus paying monthly.</div>
+        <ul><li>Everything in Monthly</li><li>Every new book as it premieres</li><li>One payment, no renewals to track</li></ul>
+        <a class="btn btn-ghost waitlist" href="#founding">Join the list</a>
+      </div>
+    </div>
+    <div class="alacarte">
+      <div class="ala"><div class="nm">Single episode<small>Keep watching without a membership</small></div><div class="pr">$2.99</div></div>
+      <div class="ala"><div class="nm">Full book<small>All 4 seasons, 50 episodes, yours to keep</small></div><div class="pr">$49.99</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="founding" id="founding">
+  <div class="wrap">
+    <div style="display:grid;gap:18px;min-width:0">
+      <div class="eyebrow">Founding members</div>
+      <h2>Get on the list before the door opens.</h2>
+      <p class="muted" style="margin:0;max-width:46ch">Founding members hear first when Book 1 premieres, watch Episode 1 free, and lock in $14.99 a month for as long as they stay.</p>
+      <div class="ml-embedded" data-form="EWVnHI"></div>
+      <p class="fine" id="cta-note">First name and email only. Unsubscribe anytime.</p>
+    </div>
+    <div class="lockbox">
+      <div class="lockrow"><span>Founding monthly</span><b>$14.99</b></div>
+      <div class="lockrow"><span>Regular monthly</span><span>$19.99</span></div>
+      <div class="lockrow"><span>You save each year</span><b>$60.00</b></div>
+      <p class="fine" style="margin:0">Your founding rate stays as long as your membership stays active.</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Questions</div><h2>Before you knock.</h2></div>
+    <div class="faq">
+      <div><h3>Is Episode 1 really free?</h3><p>Yes. Anyone can watch the premiere. Membership unlocks the rest.</p></div>
+      <div><h3>How often do new episodes come out?</h3><p>Four every week. Each book runs four seasons over 13 weeks, from the premiere through Episode 50.</p></div>
+      <div><h3>What happens after Book 1?</h3><p>The next book premieres the week after the Season 4 finale. A new book every 90 days, each with its own four seasons.</p></div>
+      <div><h3>What happens to my founding price?</h3><p>It stays at $14.99 a month while your membership is active, even after the regular price goes up.</p></div>
+      <div><h3>Can I just buy the book?</h3><p>Yes. All four seasons of a book are $49.99, or single episodes are $2.99 each.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>© 2026 Daphne Cross. All rights reserved.</span><span>The Room She Left Wrong · Secrets Behind Closed Doors, Book 1</span></div></footer>
+
+<script>
+/* Paste your MailerLite (or other) hosted sign-up form link here. */
+const WAITLIST_URL = ""; /* form is embedded below; buttons scroll to it */
+
+(function(){
+  if (WAITLIST_URL) {
+    document.querySelectorAll(".waitlist").forEach(a=>{a.href=WAITLIST_URL;a.target="_blank";a.rel="noopener"});
+  }
+
+  const seasons=[
+    {s:1,from:1,to:12,name:"The Last Sunday",c:"var(--slate)",d:"Vivian is dead, ruled a suicide. Corinne knows that house by heart, and everything in it is wrong."},
+    {s:2,from:13,to:25,name:"Everything Out of Place",c:"var(--rose)",d:"Someone is erasing the truth. The closer Corinne gets, the less she can trust her own memory."},
+    {s:3,from:26,to:37,name:"Behind the Gates",c:"var(--s3)",d:"They're coming for her career, her freedom, and her mind. Corinne fights back from inside the gates."},
+    {s:4,from:38,to:50,name:"The Room She Left Wrong",c:"var(--s4)",d:"Every door opens. The truth will cost more than she imagined."}
+  ];
+  const titles=["","The Last Sunday","Come Sunday","The Cup on Her Left","Everything Wrong","Statements","Textbook Grief","Peppermint and Honey","The Will","Eleven Minutes","Things That Aren't There","The Eulogy","The Tuesday Photograph",
+    "Unlocked","She Didn't Kill Herself","Stories","Confidential","The Pattern","Tell Her","Emptied","For Your Protection","9:14","Persecutory Ideation","Sunday Without Her","The Key","I Saw Him",
+    "Cold Water","Inside the Watch","Where Were You Tuesday","Paying It Off","She Believed Me","The Letters","Access Logs","The Garage","Concerned Family Member","The Bruise","Severed","Not Alone",
+    "Next Steps","For Sale","Intake","Handled","The Wrong Side","Run","The Bargain","The Boardroom","The Watchmaker","Ticking","The Ones I Left","She's Sorry","The Room She Left Wrong"];
+  const events={1:"Series premiere",12:"Season 1 finale",25:"Season 2 finale",37:"Season 3 finale",49:"The final secret",50:"Book 1 finale"};
+  const week=n=>Math.ceil(n/4);
+  const pad=n=>String(n).padStart(2,"0");
+  const seasonOf=n=>seasons.find(s=>n>=s.from&&n<=s.to);
+
+  const legend=document.getElementById("legend");
+  legend.innerHTML=seasons.map(s=>'<span><i style="background:'+s.c+'"></i>Season '+s.s+'</span>').join("")+'<span><i style="background:transparent;box-shadow:0 0 0 1px var(--lamp)"></i>Finales</span><span><i style="background:var(--lamp);border-radius:50%;width:6px;height:6px"></i>Free</span>';
+
+  const wrapEl=document.getElementById("seasons");
+  const rn=document.getElementById("r-num"),rt=document.getElementById("r-t"),rd=document.getElementById("r-d");
+  const btns={}; let cur=null;
+  function show(n){
+    const se=seasonOf(n), ep=n-se.from+1, b=btns[n];
+    if(cur) cur.setAttribute("aria-pressed","false");
+    if(b){b.setAttribute("aria-pressed","true"); cur=b;}
+    rn.textContent="S"+se.s+" · E"+pad(n);
+    rt.textContent=titles[n];
+    let d=(events[n]?events[n]+". ":"")+"Season "+se.s+", "+se.name+". Episode "+ep+" of "+(se.to-se.from+1)+", drops in week "+week(n)+".";
+    if(n===1) d="Free for everyone. "+d;
+    else if(n<=4) d+=" Unlocked the day you join.";
+    rd.textContent=d;
+  }
+  seasons.forEach(se=>{
+    const row=document.createElement("div"); row.className="srow"; row.style.setProperty("--sc",se.c);
+    row.innerHTML='<div class="slabel"><span class="s">Season '+se.s+' · E'+pad(se.from)+'–'+pad(se.to)+'</span><span class="n">'+se.name+'</span><span class="w">Weeks '+week(se.from)+'–'+week(se.to)+'</span></div>';
+    const g=document.createElement("div"); g.className="grid50";
+    for(let n=se.from;n<=se.to;n++){
+      const b=document.createElement("button");
+      b.className="ep"; b.type="button";
+      if(events[n]&&n!==1){b.classList.add("event"); b.style.setProperty("--c", n===50?"var(--blood)":"var(--lamp)");}
+      else b.style.setProperty("--c", se.c);
+      if(n===1) b.classList.add("free");
+      b.setAttribute("aria-label","Episode "+n+": "+titles[n]);
+      b.setAttribute("aria-pressed","false");
+      btns[n]=b;
+      b.addEventListener("click",()=>show(n));
+      b.addEventListener("mouseenter",()=>show(n));
+      g.appendChild(b);
+    }
+    row.appendChild(g); wrapEl.appendChild(row);
+  });
+  show(1);
+
+  /* full episode list, one season at a time */
+  const tabs=document.getElementById("tabs"), list=document.getElementById("eplist"), sdesc=document.getElementById("sdesc");
+  function renderSeason(k){
+    const se=seasons[k];
+    [...tabs.children].forEach((t,i)=>t.setAttribute("aria-selected",i===k?"true":"false"));
+    sdesc.textContent=se.d;
+    list.style.setProperty("--sc",se.c);
+    list.innerHTML="";
+    for(let n=se.from;n<=se.to;n++){
+      const li=document.createElement("li");
+      const tag=n===1?'<span class="tag free">Free</span>':(events[n]?'<span class="tag">'+events[n]+'</span>':'');
+      li.innerHTML='<span class="eno">E'+pad(n)+'</span><span class="etl"></span>'+tag+'<span class="ewk">Week '+week(n)+'</span>';
+      li.querySelector(".etl").textContent=titles[n];
+      list.appendChild(li);
+    }
+  }
+  seasons.forEach((se,k)=>{
+    const t=document.createElement("button"); t.type="button"; t.setAttribute("role","tab");
+    t.innerHTML='<span>Season '+se.s+'</span>'+se.name;
+    t.style.setProperty("--sc",se.c);
+    t.addEventListener("click",()=>renderSeason(k));
+    tabs.appendChild(t);
+  });
+  renderSeason(0);
+
+  const cyc=document.getElementById("cycle");
+  const books=[["Days 1–90","Book 1","The Room She Left Wrong",true],["Days 91–180","Book 2","The Hours She Lost",false],["Days 181–270","Book 3","The Truth She Buried",false]];
+  const bar='<div class="bar">'+seasons.map(s=>'<i style="background:'+s.c+'"></i>').join("")+'</div>';
+  cyc.innerHTML=books.map(b=>'<div class="book'+(b[3]?' now':'')+'"><span class="d">'+b[0]+'</span><span class="t">'+b[1]+'</span><span class="m">'+b[2]+'</span>'+bar+'</div>').join("");
+})();
+</script>
+</body>
+</html>
